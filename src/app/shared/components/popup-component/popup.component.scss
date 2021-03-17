@@ -1,0 +1,100 @@
+.popup-outer-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 997;
+
+  .clickout {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1000;
+    background-color: #000;
+    opacity: 0.5;
+  }
+
+  .popup-container {
+    /* width */
+    min-width: 320px;
+    /* ie fix */
+    width: 100%;
+    z-index: 1040;
+    margin: 8vh auto 18vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: inset 0px 0px 2px #eee;
+    padding: 16px;
+
+    /* Width */
+    &.default-popup-width {
+      max-width: 80vw;
+    }
+
+    &.x-small-popup-width {
+      max-width: 400px;
+    }
+
+    &.small-popup-width {
+      max-width: 600px;
+    }
+
+    &.medium-popup-width {
+      max-width: 800px;
+    }
+
+    /* height */
+    &.default-popup-height {
+      height: auto;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+
+    &.small-popup-height {
+      height: 40vh;
+      overflow-y: auto;
+    }
+
+    &.medium-popup-height {
+      height: 60vh;
+      overflow-y: auto;
+    }
+
+    /*
+    @media(max-width: map-get($grid-breakpoints, sm)) {
+      &.default-popup-width, &.small-popup-width, &.medium-popup-width {
+        max-width: calc(100vw - 36px);
+        min-width: calc(100vw - 36px);
+      }
+    }
+   */
+
+    .close-popup-button {
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      color: #555;
+
+      .material-icons {
+        vertical-align: bottom;
+      }
+    }
+
+    .popup-title {
+      padding-bottom: 12px;
+      font-size: 18px;
+      line-height: 22px;
+      font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<ng-template #popupTemplate>
+  <div class="popup-outer-container" *ngIf="visible">
+    <div class="clickout" (click)="outsideClick($event)"></div>
+    <div class="popup-container" [ngClass]="[width, height]">
+      <button type="button"
+              class="button button-tertiary close-popup-button"
+              *ngIf="showCloseButton"
+              (click)="hidePopup($event)">
+        <span class="material-icons">
+          close
+        </span>
+      </button>
+      <div class="popup-title" *ngIf="title">
+        {{ title }}
+      </div>
+      <ng-content></ng-content>
+    </div>
+  </div>
+</ng-template>

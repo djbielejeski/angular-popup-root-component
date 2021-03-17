@@ -1,0 +1,9 @@
+<h1>Child Component</h1>
+<button type="button" (click)="showPopup = true">Show Popup</button>
+<app-popup [(visible)]="showPopup"
+           [title]="'Hello There'">
+  <p>
+    Some inner popup content
+  </p>
+  <button type="button" (click)="showPopup = false">Close</button>
+</app-popup>
